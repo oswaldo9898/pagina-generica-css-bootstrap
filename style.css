@@ -1,0 +1,72 @@
+body {
+    background-color: #121211;
+    color: white;
+}
+
+/* Estilos para el navbar */
+header {
+    position: fixed !important;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+/* estilos para las letras del menu del navbar */
+header a {
+    color: white;
+    text-decoration: none;
+    padding: 0px 20px;
+    font-weight: bold;
+}
+/* estilo para que al pasar el clic por las letras del navbar cambien de color */
+header a:hover {
+    color: rgb(232, 232, 8);
+}
+
+/* estilo para colocar la imagen como fondo en la seccion1 */
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-image: linear-gradient(0deg,rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url("https://pm1.narvii.com/6808/a9de378b3e17f1972ec52076328353bdf002f119v2_hq.jpg");
+    background-size: cover;
+    color: white;
+}
+
+
+#galeria {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+}
+
+#galeria img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* estilos para la seccion 3 pedir */
+#como-pedir {
+    display: flex;
+    justify-content: center;
+    padding: 100px 10%;
+}
+/* media-query cuando llega a un tamaño se activa este loque de estilos */
+@media (max-width:750px) {
+    #como-pedir {
+        flex-direction: column-reverse;
+    }
+}
+
+#como-pedir div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+#como-pedir img {
+    min-width: 200px;
+    max-width: 350px;
+}
