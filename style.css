@@ -26,6 +26,7 @@ header a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+    /* PONER LA IMAGEN QUE OCUPE TODA LA PANTALLA */
     min-height: 100vh;
     background-image: linear-gradient(0deg,rgb(0,0,0,0.5),rgb(0,0,0,0.5)), url("https://pm1.narvii.com/6808/a9de378b3e17f1972ec52076328353bdf002f119v2_hq.jpg");
     background-size: cover;
@@ -39,19 +40,50 @@ header a:hover {
     grid-template-rows: auto;
 }
 
+@media (max-width:900px) {
+    #galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
 #galeria img {
     display: block;
     width: 100%;
     height: 100%;
 }
 
+#galeria img:hover {
+    opacity: 0.5;
+    cursor: pointer;
+}
+
 
 /* estilos para la seccion 3 pedir */
 #como-pedir {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)), 
+        url("https://images.pexels.com/photos/2338113/pexels-photo-2338113.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+    background-position-x: center;
+    background-position-y: bottom;
+    background-size: cover;
     display: flex;
     justify-content: center;
-    padding: 100px 10%;
+    align-items: center;
+    /* PONER LA IMAGEN QUE OCUPE TODA LA PANTALLA */
+    height: 100vh;
 }
+
+#como-pedir h2 {
+    
+    font-size: 3em;
+}
+
+#como-pedir ol {
+    font-size: 1.5em;
+}
+
 /* media-query cuando llega a un tamaño se activa este loque de estilos */
 @media (max-width:750px) {
     #como-pedir {
@@ -63,7 +95,7 @@ header a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding-right: 20px;
+    padding: 25px;
 }
 
 #como-pedir img {
